@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.ZhiliangjianceDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.ZhiliangjianceEntity" id="zhiliangjianceMap">
+        <result property="suyuanma" column="suyuanma"/>
+        <result property="jingxiaoshangming" column="jingxiaoshangming"/>
+        <result property="chanpinmingcheng" column="chanpinmingcheng"/>
+        <result property="chanpinpinzhong" column="chanpinpinzhong"/>
+        <result property="tupian" column="tupian"/>
+        <result property="jiagongqiye" column="jiagongqiye"/>
+        <result property="shuliang" column="shuliang"/>
+        <result property="shengchanriqi" column="shengchanriqi"/>
+        <result property="jiagonggongyi" column="jiagonggongyi"/>
+        <result property="jiagongliucheng" column="jiagongliucheng"/>
+        <result property="tianjiaji" column="tianjiaji"/>
+        <result property="jingxiaoshanghao" column="jingxiaoshanghao"/>
+        <result property="nongchanpinmingcheng" column="nongchanpinmingcheng"/>
+        <result property="jianguanzhezhanghao" column="jianguanzhezhanghao"/>
+        <result property="jianguanzhexingming" column="jianguanzhexingming"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.ZhiliangjianceVO" >
+		SELECT * FROM zhiliangjiance  zhiliangjiance         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.ZhiliangjianceVO" >
+		SELECT  zhiliangjiance.* FROM zhiliangjiance  zhiliangjiance 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.ZhiliangjianceView" >
+
+		SELECT  zhiliangjiance.* FROM zhiliangjiance  zhiliangjiance 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.ZhiliangjianceView" >
+		SELECT * FROM zhiliangjiance  zhiliangjiance <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+
+</mapper>

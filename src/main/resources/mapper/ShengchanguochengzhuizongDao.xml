@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.ShengchanguochengzhuizongDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.ShengchanguochengzhuizongEntity" id="shengchanguochengzhuizongMap">
+        <result property="suyuanma" column="suyuanma"/>
+        <result property="nongchanpinmingcheng" column="nongchanpinmingcheng"/>
+        <result property="nongchanpinpinzhong" column="nongchanpinpinzhong"/>
+        <result property="chanpintupian" column="chanpintupian"/>
+        <result property="turangsuanjiandu" column="turangsuanjiandu"/>
+        <result property="turangfeilizhi" column="turangfeilizhi"/>
+        <result property="guangai" column="guangai"/>
+        <result property="bozhongjilu" column="bozhongjilu"/>
+        <result property="shifeijilu" column="shifeijilu"/>
+        <result property="shiyaojilu" column="shiyaojilu"/>
+        <result property="caizhaishijian" column="caizhaishijian"/>
+        <result property="shengchanzhehao" column="shengchanzhehao"/>
+        <result property="shengchanzheming" column="shengchanzheming"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.ShengchanguochengzhuizongVO" >
+		SELECT * FROM shengchanguochengzhuizong  shengchanguochengzhuizong         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.ShengchanguochengzhuizongVO" >
+		SELECT  shengchanguochengzhuizong.* FROM shengchanguochengzhuizong  shengchanguochengzhuizong 	
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.ShengchanguochengzhuizongView" >
+
+		SELECT  shengchanguochengzhuizong.* FROM shengchanguochengzhuizong  shengchanguochengzhuizong 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.ShengchanguochengzhuizongView" >
+		SELECT * FROM shengchanguochengzhuizong  shengchanguochengzhuizong <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+
+</mapper>

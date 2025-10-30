@@ -1,0 +1,155 @@
+package com.entity.vo;
+
+import com.entity.JingxiaoshangEntity;
+
+import com.baomidou.mybatisplus.annotations.TableName;
+import java.util.Date;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.io.Serializable;
+ 
+
+/**
+ * 经销商
+ * @author 
+ * @email 
+ * @date 2025-03-23 16:42:55
+ */
+public class JingxiaoshangVO  implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	 			
+	/**
+	 * 密码
+	 */
+	
+	private String mima;
+		
+	/**
+	 * 经销商名
+	 */
+	
+	private String jingxiaoshangming;
+		
+	/**
+	 * 头像
+	 */
+	
+	private String touxiang;
+		
+	/**
+	 * 联系人
+	 */
+	
+	private String lianxiren;
+		
+	/**
+	 * 联系电话
+	 */
+	
+	private String lianxidianhua;
+		
+	/**
+	 * 邮箱
+	 */
+	
+	private String youxiang;
+				
+	
+	/**
+	 * 设置：密码
+	 */
+	 
+	public void setMima(String mima) {
+		this.mima = mima;
+	}
+	
+	/**
+	 * 获取：密码
+	 */
+	public String getMima() {
+		return mima;
+	}
+				
+	
+	/**
+	 * 设置：经销商名
+	 */
+	 
+	public void setJingxiaoshangming(String jingxiaoshangming) {
+		this.jingxiaoshangming = jingxiaoshangming;
+	}
+	
+	/**
+	 * 获取：经销商名
+	 */
+	public String getJingxiaoshangming() {
+		return jingxiaoshangming;
+	}
+				
+	
+	/**
+	 * 设置：头像
+	 */
+	 
+	public void setTouxiang(String touxiang) {
+		this.touxiang = touxiang;
+	}
+	
+	/**
+	 * 获取：头像
+	 */
+	public String getTouxiang() {
+		return touxiang;
+	}
+				
+	
+	/**
+	 * 设置：联系人
+	 */
+	 
+	public void setLianxiren(String lianxiren) {
+		this.lianxiren = lianxiren;
+	}
+	
+	/**
+	 * 获取：联系人
+	 */
+	public String getLianxiren() {
+		return lianxiren;
+	}
+				
+	
+	/**
+	 * 设置：联系电话
+	 */
+	 
+	public void setLianxidianhua(String lianxidianhua) {
+		this.lianxidianhua = lianxidianhua;
+	}
+	
+	/**
+	 * 获取：联系电话
+	 */
+	public String getLianxidianhua() {
+		return lianxidianhua;
+	}
+				
+	
+	/**
+	 * 设置：邮箱
+	 */
+	 
+	public void setYouxiang(String youxiang) {
+		this.youxiang = youxiang;
+	}
+	
+	/**
+	 * 获取：邮箱
+	 */
+	public String getYouxiang() {
+		return youxiang;
+	}
+			
+}
